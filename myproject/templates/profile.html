@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+<form action="/admin" method="post"></form>
+    <h1>Your Profile</h1>
+    <p>Full Name: {{ profile.full_name }}</p>
+    <p>Date of Birth: {{ profile.date_of_birth }}</p>
+    <p>Education: {{ profile.education }}</p>
+    <p>Institution: {{ profile.institution }}</p>
+
+    <a href="{{ url_for('edit_profile') }}" class="btn btn-primary">Edit Profile</a>
+{% endblock %}
